@@ -1,6 +1,7 @@
-<!-- <script>
+<script>
   import { invoke } from "@tauri-apps/api/core";
-
+  import PromptForm from "../components/PromptForm.svelte";
+  let dailyPrompt = localStorage.getItem("dailyPrompt") || ""
   let name = $state("");
   let greetMsg = $state("");
 
@@ -12,7 +13,7 @@
 </script>
 
 <main class="container">
-  <h1>Welcome to Tauri + Svelte</h1>
+  <h1>Apa rencanamu hari ini?</h1>
 
   <div class="row">
     <a href="https://vitejs.dev" target="_blank">
@@ -25,7 +26,7 @@
       <img src="/svelte.svg" class="logo svelte-kit" alt="SvelteKit Logo" />
     </a>
   </div>
-  <p>Click on the Tauri, Vite, and SvelteKit logos to learn more.</p>
+  <p>Click on the Journal, ToDoList and Diary to continue.</p>
 
   <form class="row" onsubmit={greet}>
     <input id="greet-input" placeholder="Enter a name..." bind:value={name} />
@@ -153,9 +154,9 @@ button {
   }
 }
 
-</style> -->
+</style>
 
-<script>
+<!-- <script>
   import PromptForm from '../components/PromptForm.svelte';
 
   let dailyPrompt = localStorage.getItem("dailyPrompt") || "";
@@ -175,4 +176,4 @@ button {
       <strong>Rencana hari ini:</strong> {dailyPrompt}
     </div>
   {/if}
-</main>
+</main> -->
